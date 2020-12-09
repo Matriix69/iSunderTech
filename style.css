@@ -170,7 +170,7 @@ p{
 }
 
 .box {
-    background-color: #a8dab5;
+    background-color: #ececec;
     color: #495057;
     padding: 2rem;
     margin: 20px;
@@ -188,7 +188,7 @@ p{
 }
 
 .btn-primary{
-    background: #a8dab5;
+    background: #ececec;
     color: #1d9c4f;
     border: 0px;
 }
@@ -360,3 +360,12 @@ p{
      
         
 }
+
+@media all and (max-width: 762px){
+    .zone:hover{
+            box-shadow:0 0px 0px 0 rgba(0,0,0,0);
+        }
+        
+    }
+        
+
