@@ -397,8 +397,18 @@ p{
     .navbar .nav-link {
         font-weight: 600;
         font-size: 1.5rem;
+
       }
         
 }
+@media (max-width: 767px) {
+    .navbar-collapse
+      {
+          background-color:#46B090;
+          padding: 1rem;
+          border-radius: 1rem;
+      }
+  }
+
         
 
