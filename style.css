@@ -137,6 +137,7 @@ p{
     font-size: 6rem;
     color: #a8dab5;
     text-align: center;
+    padding: 0 0 2rem 0;
     
 }
 
@@ -148,11 +149,12 @@ p{
  *  section style
  **********************************************************************/
 .section {
+    height: 70%vh;
     background: #f8f8fd;
 }
 
 .section-end{
-    padding: 2rem 0rem;
+    padding: 5rem 0rem;
 }
 .section-end-contact{
     padding: 2rem 0 0 0rem;
@@ -173,7 +175,7 @@ p{
 }
 
 .box {
-    background-color: #fff;
+    background-color: #DFDFF2;
     color: #495057;
     padding: 2rem;
     margin: 20px;
@@ -191,7 +193,7 @@ p{
 }
 
 .btn-primary{
-    background: #ececec;
+    background: #DFDFF2;
     color: #1d9c4f;
     border: 0px;
 }
@@ -211,14 +213,13 @@ p{
  .box2 {
     color: #495057;
     padding: 1rem;
-    margin: 2rem;
     font-size: 1em;
     text-align: center;
     border-radius: 1rem;
 }
 
 .box2 > img {
-    width: 100%;
+    width: 50%;
     height: auto;
     padding: 1rem;
     border: 10px solid #a8dab5;
@@ -328,6 +329,7 @@ p{
 @media only screen and (max-width: 767px){
     .header{
         font-size: 3rem;
+        padding: 0 0 3rem 0;
         
     }
 }
@@ -370,5 +372,21 @@ p{
         }
         
     }
+
+@media only screen and (max-width: 500px){
+    .grid-wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 20px;
+    }
+        
+}
+@media only screen and (max-width: 500px){
+    .navbar .nav-link {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+        
+}
         
 
