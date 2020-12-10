@@ -3,6 +3,9 @@ html, body {
     font-family: 'Varela Round', sans-serif;
     padding-top:1.5rem;
 }
+html .sr{
+    visibility: hidden;
+}
 
 .zone {
     /*padding:30px 50px;*/
@@ -104,6 +107,14 @@ p{
 /***********************************************************************
  * header section
  **********************************************************************/
+ @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 .intro {
     /*show heigh: auto*/
     height: 70vh; 
@@ -114,6 +125,7 @@ p{
     font-family: 'Paytone One', sans-serif;
     color: #a8dab5;
     text-align: center;
+    
 
 }
 .intro p{
