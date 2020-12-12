@@ -240,7 +240,7 @@ p{
 .box {
     background-color: #DFDFF2;
     color: #495057;
-    
+
     margin: 20px;
     font-size: 1em;
     text-align: center;
@@ -253,6 +253,7 @@ p{
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
+    padding: 0.5rem;
 }
 
 .btn-primary{
