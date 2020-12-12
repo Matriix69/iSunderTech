@@ -147,6 +147,15 @@ p{
     padding: 0 0 2rem 0;
     
 }
+.header2{
+    font-family: 'Paytone One', sans-serif;
+    font-size: 6rem;
+    color: #a8dab5;
+    text-align: center;
+    padding: 0 0 2rem 0;
+    
+}
+
 
 .header-small{
     font-weight: 900;
@@ -288,7 +297,7 @@ p{
     max-width: 800px;
     margin: 0px auto;
     position: relative;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
 }
 
 .submit-btn{
