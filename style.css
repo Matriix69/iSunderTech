@@ -312,7 +312,7 @@ p{
     border-radius: 0.2rem;
     width: 200px;
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .submit-btn:hover{
     background: linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(9,146,104,1) 100%);
@@ -326,7 +326,7 @@ p{
   
   .custom-field {
     position: relative;
-    font-size: 14px;
+    font-size: 19px;
     padding-top: 20px;
     margin-bottom: 5px;
   }
@@ -342,7 +342,7 @@ p{
     border-radius: 3px;
     width: 250px;
     outline: none;
-    font-size: 14px;
+    font-size: 19px;
   }
   
   .custom-field .placeholder {
@@ -360,7 +360,7 @@ p{
   .custom-field input:valid + .placeholder,
   .custom-field input:focus + .placeholder {
     top: 10px;
-    font-size: 10px;
+    font-size: 16px;
     color: #222;
   }
   
