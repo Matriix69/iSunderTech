@@ -27,15 +27,15 @@
 
 
 ScrollReveal().reveal('.scroll', {delay: 300, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-ScrollReveal().reveal('.header', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-ScrollReveal().reveal('.scroll1', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
+ScrollReveal().reveal('scroll1', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
+
 ScrollReveal().reveal('.scroll2', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
 ScrollReveal().reveal('.scroll3', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-ScrollReveal().reveal('.scroll4', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
+
 ScrollReveal().reveal('img', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
 ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
 ScrollReveal().reveal('.contact-form', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
 ScrollReveal().reveal('.scroll5', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
 ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-ScrollReveal().reveal('.underline', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
+
 
