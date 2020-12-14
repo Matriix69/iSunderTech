@@ -1,5 +1,5 @@
   $(window).scroll(function() {
-      /* affix after scrolling 100px */
+      /* affix after scrolling 150px */
       if ($(document).scrollTop() > 150) {
       $('.navbar').addClass('affix')
       } else {
@@ -37,5 +37,3 @@ ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '30px', e
 ScrollReveal().reveal('.contact-form', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
 ScrollReveal().reveal('.scroll5', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
 ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-
-
