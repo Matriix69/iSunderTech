@@ -93,7 +93,7 @@ html .sr{
  **********************************************************************/
 .intro {
     /*show heigh: auto*/
-    height: 95vh; 
+    height: 90vh; 
     display: flex;
     align-items: center;
     justify-content: center;
