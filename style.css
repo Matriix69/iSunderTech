@@ -1,6 +1,6 @@
 html, body {
     margin: 0 auto;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     
 }
 html .sr{
@@ -8,38 +8,25 @@ html .sr{
 }
 * {
     box-sizing: border-box;
-}
-
-.zone {
-    /*padding:30px 50px;*/
-    cursor:pointer;
-    color:#FFF;
-    font-size:2em;
-    border-radius:4px;
-    transition: all 0.3s linear;
-}
-
-.zone:hover {
-    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-}
-
-p{
     word-wrap:break-word;
 }
+
 
 /***********************************************************************
  *  Nav Bar
  **********************************************************************/
  .navbar { 
+
      padding: 1.5rem 1.5rem;
     -webkit-transition:padding 0.4s ease;
     -moz-transition:padding 0.4s ease; 
     -o-transition:padding 0.4s ease;        
     transition:padding 0.4s ease;  
   }
+  .navbar-nav{
+      text-align: center;
+  }
+
 
   .navbar-brand{
     font-family: 'Paytone One', sans-serif;
@@ -49,7 +36,7 @@ p{
   .affix {
     padding-top: 0.66rem !important;
     padding-bottom: 0.66rem !important;
-    background: #099268 !important;
+    background: #099268;
     -webkit-transition:padding 0.4s linear;
     -moz-transition:padding 0.4s linear;  
     -o-transition:padding 0.4s linear;         
@@ -65,18 +52,17 @@ p{
       min-height:calc(100% - 70px);
   }
 
-  .navbar{
-    background:  linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) );
-    color: #FFF;
-  }
+
   .navbar .nav-link{
-    font-weight: 600;
+    letter-spacing: 2px;
+    font-weight: bold;
   }
 
   .navbar .nav-link i {
       padding: 10px;
       color: #ececec;
   }
+    
 
 
   /* link hover animation*/
@@ -107,7 +93,7 @@ p{
  **********************************************************************/
 .intro {
     /*show heigh: auto*/
-    height: 90vh; 
+    height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,11 +106,11 @@ p{
     -o-background-size: cover;
     background-size: cover;
     margin: 0;
-    padding: 0;
+    padding:0;
 
 }
 .intro p{
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #ececec;
     font-weight: 600;
 } 
@@ -150,7 +136,7 @@ p{
 .header2{
     font-family: 'Paytone One', sans-serif;
     font-size: 6rem;
-    color: #a8dab5;
+    color: #C5CED2;
     text-align: center;
     padding: 0 0 2rem 0;
     
@@ -161,23 +147,6 @@ p{
     font-weight: 900;
 }
 
-/***********************************************************************
- *  section style and text containers
- **********************************************************************/
-.section {
-    height: 70%vh;
-    background: #ebedee;
-}
-
-.section-end{
-    padding: 5rem 0rem;
-}
-.section-end-contact{
-    padding: 2rem 0 0 0rem;
-}
-.paragra{
-    padding: 1rem 4rem;
-}
 .underline {
     margin: .5em 0 1em;
     position: relative;
@@ -194,12 +163,9 @@ p{
 }
 
 h3 {
-    font-size: 32px;
-    font-size: 1.6rem;
-    font-family: 'Paytone One', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     margin: .8rem 0 .4rem;
-    letter-spacing: -.025em;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.2;
     color: #2c2942;
 }
@@ -208,20 +174,31 @@ h3 {
     height: auto;
     max-width: 100%;
     display: block;
-    margin: auto;
-    border-radius: 1rem;
+    margin: auto 0px;
 }
 
+#about{
+    font-size: 1.2rem;
 }
-p{
-    font-family: 'Lato', sans-serif;
 
+/***********************************************************************
+ *  sections
+ **********************************************************************/
+.section {
+    height: 70%vh;
+    background: #ebedee;
+}
 
+.section-end{
+    padding: 5rem 0rem;
+}
+.section-end-contact{
+    padding: 2rem 0 0 0rem;
 }
 
 
 /***********************************************************************
- *  Grid Panel
+ *  product card
  **********************************************************************/
 .card{
     width: 400px;
@@ -229,7 +206,7 @@ p{
 
 }
 .card p{
-    font-size: 15px;
+    font-size: 1rem;
     line-height: 1.7rem;
 }
  .grid-wrapper {
@@ -251,23 +228,28 @@ p{
 }
 
 /***********************************************************************
- *  team
+ *  team card
  **********************************************************************/
- .grid-wrapper2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
+.box-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
- .box2 {
+ .box {
+    width: 200px;
+    height: auto;
+    background: none;
     color: #495057;
     padding: 1rem;
     font-size: 1em;
     text-align: center;
-    border-radius: 1rem;
+    margin: 10px;
 }
 
-.box2 > img {
-    width: 50%;
+.box > img {
+    width: 100%;
     height: auto;
     border: 10px solid #a8dab5;
     border-radius: 500px;
@@ -276,23 +258,17 @@ p{
 }
 
 /***********************************************************************
- *  Form
+ *  Form btn
  **********************************************************************/
-.get-started{
-    max-width: 800px;
-    margin: 0px auto;
-    position: relative;
-    padding: 0 30px 30px 30px;
-}
 
 .submit-btn{
     display: inline-block;
-    background: #ebedee;
+    background: none;
     color: #495057;
     font-size: 16px;
     font-weight: 900;
     padding: 1rem;
-    border: 1px solid #099268;
+    border: 1px solid black;
     border-radius: 0.2rem;
     width: 200px;
     cursor: pointer;
@@ -304,10 +280,12 @@ p{
 
 
 
-/* ******************   form second*************************************/
+/* ************************************
+form style
+*************************************/
 .custom-field {
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 20px;
     margin-bottom: 5px;
   }
@@ -326,7 +304,21 @@ p{
     border-radius: 3px;
     width: 100%;
     outline: none;
-    font-size: 14px;
+    font-size: 15px;
+  }
+
+  .custom-field textarea {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
   }
   
   .custom-field .placeholder {
@@ -345,7 +337,15 @@ p{
   .custom-field input:valid + .placeholder,
   .custom-field input:focus + .placeholder {
     top: 10px;
-    font-size: 10px;
+    font-size: 13px;
+    color: #222;
+  }
+
+  .custom-field textarea.dirty + .placeholder,
+  .custom-field textarea:valid + .placeholder,
+  .custom-field textarea:focus + .placeholder {
+    top: 10px;
+    font-size: 13px;
     color: #222;
   }
   
@@ -357,7 +357,18 @@ p{
     background:
       linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
       linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
-      linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+      linear-gradient(90deg, #ebedee, #ebedee) left bottom/100% no-repeat;
+    transition: background-size 0.3s ease;
+  }
+
+  .custom-field.two textarea {
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background:
+      linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+      linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+      linear-gradient(90deg, #ebedee, #ebedee) left bottom/100% no-repeat;
     transition: background-size 0.3s ease;
   }
   
@@ -367,6 +378,10 @@ p{
     background-size: 100% 0.15em, 100% 0.1em, 100%;
   }
 
+  .custom-field.two textarea:valid,
+  .custom-field.two textarea:focus {
+    background-size: 100% 0.15em, 100% 0.1em, 100%;
+  }
 
 /***********************************************************************
  *  Footer
@@ -388,7 +403,6 @@ p{
   .copyright {
     background-color: #1a252f;
   }
-/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 
 /*media queries */
 
@@ -400,7 +414,7 @@ p{
 }
 
 @media only screen and (max-width: 767px){
-    .header{
+    .header, .header2{
         font-size: 3rem;
         padding: 0 0 3rem 0;
         
@@ -439,13 +453,6 @@ p{
         
 }
 
-@media all and (max-width: 762px){
-    .zone:hover{
-            box-shadow:0 0px 0px 0 rgba(0,0,0,0);
-        }
-        
-    }
-
 @media only screen and (max-width: 500px){
     .grid-wrapper2 {
     display: grid;
@@ -454,21 +461,12 @@ p{
     }
         
 }
-@media only screen and (max-width: 500px){
-    .navbar .nav-link {
-        font-weight: 600;
-        font-size: 1.5rem;
-
-      }
-        
-}
 @media (max-width: 991px) {
     .navbar-collapse
       {
-        background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) );
-          padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
           border-radius: 0.5rem;
-          width:100% !important;
+          padding: 1rem 0;
       }
   }
 
