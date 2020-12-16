@@ -1,6 +1,10 @@
 @font-face {
-  font-family: 'MyWebFont';
-  src: url('BrownStd-Light.otf');
+  font-family: 'BrownStd';
+  src: url('BrownStd-Light.woff2') format('woff2'),
+      url('BrownStd-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 html, body {
