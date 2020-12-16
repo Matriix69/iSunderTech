@@ -11,3 +11,15 @@ window.onload = function() {
     });
   });
 };
+
+function sendMail(params){
+  var tempParams = {
+    from_name: document.getElementById('from_name').value,
+    to_name: document.getElementById('email').value,
+    message: document.getElementById('message').value
+  };
+  emailjs.send('service_uijhw6c', 'template_8w4m6gp', tempParams)
+  .then(function(res){
+    console.log("success", res.status);
+  })
+}

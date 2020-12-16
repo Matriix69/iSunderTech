@@ -11,12 +11,10 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
   <script src="./index.js"></script>
   <script src="https://kit.fontawesome.com/e5672510a3.js" crossorigin="anonymous"></script>
   
-
-
 </head>
 <body >
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark" data-toggle="affix">
@@ -32,13 +30,13 @@
             <a class="nav-link cool-link js-scroll-trigger" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cool-link js-scroll-trigger" href="#about">Aout Us</a>
+            <a class="nav-link cool-link js-scroll-trigger" href="#about">Aout</a>
           </li>
           <li class="nav-item">
             <a class="nav-link cool-link js-scroll-trigger" href="#tech">Tech</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cool-link js-scroll-trigger" href="#team">The Team</a>
+            <a class="nav-link cool-link js-scroll-trigger" href="#team">Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link cool-link js-scroll-trigger" href="#contact">contact</a>
@@ -75,38 +73,37 @@
     </div>
   </header>
 
-
-<section id="about" class="section-end">
-  <div class="container">
-    <h2 class="header">Be Part Of Us</h2>
-    <div class="row">
-      <div class="scroll1 col-lg-6 p-5">
-        <h3 class="underline" >About us</h3>
-        <p class=""> 
-          Isunder Tech is a company that arose out of humble beginnings; our three young Cofounders hoping to help the proliferation of electric vehicles.<br></br>
-          Through research, we found that a concept called range anxiety was a key culprit limiting Electric Vehicle uptake and use. <br></br>
-          Leveraging our diverse backgrounds and expertise, we looked at the weaknesses of the market in addressing this issue and created a solution – The Switched Mode Power e-motor. <br></br>
-          After hours upon hours of brainstorming sessions and marketanalysis, we came up with some key differentiators to allow us to succeed in a growing industry. <br></br>
-          Thus, Isunder Tech  was belched forth. At Isunder Tech, we manufacture (as well as install for retrofit services) smart, efficient and cost-effective electric motors and controllers for Electric Vehicle use.
-        </p>
-      </div>
-      <div class="col-lg-6 mt-auto mb-auto">
-        <img class="img " src="./img/team3.jpg" alt="team image">
-      </div>
+  <section id="about" class="">
+    <div class="container section-end"> 
+        <h2 class="header">Be Part Of Us</h2>
+          <div class="container box-wrapper1">
+              <div class="box1">
+                <h5>Hello!</h5>
+                <h1 class="">who we are</h1>
+                <p class=""> 
+                  Isunder Tech is a company that arose out of humble beginnings; our three young Cofounders hoping to help the proliferation of electric vehicles.
+                  Through research, we found that a concept called range anxiety was a key culprit limiting Electric Vehicle uptake and use. <br></br>
+                  Leveraging our diverse backgrounds and expertise, we looked at the weaknesses of the market in addressing this issue and created a solution – The Switched Mode Power e-motor.
+                  After hours upon hours of brainstorming sessions and marketanalysis, we came up with some key differentiators to allow us to succeed in a growing industry. <br></br>
+                  Thus, Isunder Tech  was belched forth. At Isunder Tech, we manufacture (as well as install for retrofit services) smart, efficient and cost-effective electric motors and controllers for Electric Vehicle use.
+                </p>
+              </div>
+              
+          </div>
+            <div class="container box-wrapper2">
+              <div class="box2 push">
+                <h3  >Our Mission</h3>
+                <p class="pt-2">Accelerating the transport industry's transition from fossil propulsion to clean technologies.</p>        
+              </div>
+              <div class="box2">
+                <h3 >Our Vision</h3>
+                <p class="pt-2">
+                  Solving the limitations of Electric vehicles through integrated, smart and efficient technologies.</p>
+              </div>
+          </div>
     </div>
-    <div class="row">
-      <div class="col-lg-6 p-5 scroll1">
-        <h3 class="underline" >Our Mission</h3>
-        <p class="pt-2">Accelerating the transport industry's transition from fossil propulsion to clean technologies.</p>
-      </div>
-      <div class="col-lg-6 p-5 scroll1">
-        <h3 class="underline" >Our Vision</h3>
-        <p class="pt-2">
-          Solving the limitations of Electric vehicles through integrated, smart and efficient technologies.</p>
-      </div>
-    </div>
-  </div>
-</section>  
+  </section>
+ 
 
 <!-- Projects -->
 <section id="tech" class="section section-end">
@@ -148,13 +145,17 @@
         <div class="container box-wrapper">
             <div class="box">
               <img src="./img/paul.jpg" alt="paul's photo" />
-              <h6 class="header-small">Ogah Abeni</h6>
-              <p>Managing Director</p>
+              <div class="height">
+                <h6 class="header-small">Ogah Abeni</h6>
+                <p>Managing Director</p>
+              </div>              
             </div>
             <div class="box">
               <img src="./img/sam.jpg" alt="Sam's photo" />
-              <h6 class="header-small">Lawal Samuel</h6>
-              <p>Director Of Technical Operations</p>
+              <div class="height">
+                <h6 class="header-small">Lawal Samuel</h6>
+                <p>Director Of Technical Operations</p>
+              </div>              
             </div>
         </div> 
   </div>
@@ -169,35 +170,27 @@
       <!-- Contact Section Form-->
       <div class="row scroll3">
         <div class="col-lg-8 mx-auto">
-          <form>
             <div>
               <label class="custom-field two">
-                <input type="name" required/>
+                <input type="name" id="from_name" required/>
                 <span class="placeholder">Name</span>
               </label>
             </div>
             <div>
               <label class="custom-field two">
-                <input type="email" required/>
+                <input type="email" id='email' required/>
                 <span class="placeholder">Email</span>
               </label>
             </div>
             <div>
               <label class="custom-field two">
-                <input type="phone" required/>
-                <span class="placeholder">phone</span>
-              </label>
-            </div>
-            <div>
-              <label class="custom-field two">
-                <textarea name="message" id="" cols="0" rows="0" required></textarea>
+                <textarea name="message" id="message" cols="0" rows="0" required></textarea>
                 <span class="placeholder">Message</span>
               </label>
             </div>
             <div class=" pb-5">
-              <input class="submit-btn" type="submit" value="Call To Action" name="">
+              <input onclick="sendMail()" class="submit-btn" type="submit" value="Call To Action" name="">
             </div>
-          </form>
         </div>
       </div> 
   </div>
@@ -262,6 +255,12 @@
 </div>
 
 <script type="text/javascript" src="./form.js"></script>
+<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+  emailjs.init("user_PxSsadZgFpBu2FGtHlaxw");
+  })();
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="index.js"></script>
