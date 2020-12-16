@@ -1,7 +1,11 @@
 @font-face {
   font-family: 'BrownStd';
-  src: url('BrownStd-Light.woff2') format('woff2'),
-      url('BrownStd-Light.woff') format('woff');
+  src: url('BrownStd-Light.eot');
+  src: url('BrownStd-Light.eot?#iefix') format('embedded-opentype'),
+      url('BrownStd-Light.woff2') format('woff2'),
+      url('BrownStd-Light.woff') format('woff'),
+      url('BrownStd-Light.ttf') format('truetype'),
+      url('BrownStd-Light.svg#BrownStd-Light') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
