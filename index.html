@@ -17,7 +17,7 @@
   
 </head>
 <body >
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" data-toggle="affix">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="nav" data-toggle="affix">
     <div class="container">
       <a class="navbar-brand pr-5" href="#">iSunder Tech</a>
       <button class="navbar-toggler menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
             <a class="nav-link cool-link js-scroll-trigger" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cool-link js-scroll-trigger" href="#about">Aout</a>
+            <a class="nav-link cool-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link cool-link js-scroll-trigger" href="#tech">Tech</a>
@@ -63,12 +63,12 @@
 
   <!-- header  -->
   <header id="home" class="intro">
-    <div class="container flex-column">
+    <div class="container">
       <h1 class="scroll">
         An Electric Vehicle Engine Manufacturing And Retrofit Company.
       </h1>
-      <p class="pt-2 scroll2">
-        Find out <a href="#about" class="cool-link js-scroll-trigger">who we are</a> and <a href="#tech "  class="cool-link js-scroll-trigger">how we can help.</a>
+      <p class="scroll2">
+        Find out <a href="#about" class="cool-link js-scroll-trigger">who we are</a> and <a href="#contact"  class="cool-link js-scroll-trigger">how we can help.</a>
       </p>
     </div>
   </header>
@@ -166,8 +166,10 @@
       <!-- Contact Section Heading-->
       <h2 class="header2">Call us to Action</h2>
       <!-- Contact Section Form-->
-      <div class="row scroll3">
-        <div class="col-lg-6 mx-auto">
+      <div class="">
+        <div id="error" class="error"></div>
+        <div class="col-lg-6 mx-auto ">
+          <form id="form"> 
             <div>
               <label class="custom-field two">
                 <input type="name" id="from_name" required/>
@@ -187,8 +189,10 @@
               </label>
             </div>
             <div class=" pb-5">
-              <input onclick="sendMail()" class="submit-btn" type="submit" value="Call To Action" name="">
+              <!-- <input class="submit-btn" type="submit" value="Call To Action" name=""> -->
+              <button class="submit-btn" onclick=sendMail() type="submit">Submit</button>
             </div>
+          </form>
         </div>
       </div> 
   </div>
@@ -219,7 +223,7 @@
 </footer>
 
 <div class="copyright py-4 text-center text-white">
-  <div class="container"><small>Copyright © Your Website 2020 made by matrix</small></div>
+  <div class="container"><small>Copyright © Isunder Tech 2020</small></div>
 </div>
 
 <script type="text/javascript" src="./form.js"></script>

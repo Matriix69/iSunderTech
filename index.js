@@ -1,11 +1,21 @@
-  $(window).scroll(function() {
-      /* affix after scrolling 150px */
-      if ($(document).scrollTop() > 150) {
-      $('.navbar').addClass('affix')
-      } else {
-      $('.navbar').removeClass('affix')
-      }
-  });
+  window.onscroll = function() {scrollFunction()};
+
+//   const scrolling = () => {
+//     const scroll = document.getElementsByClassName('navbar')
+//     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+//       scroll.classList.add("affix");
+//     } else {
+//       scroll.classList.remove("affix");
+//   }  
+// }
+function scrollFunction() {
+  const scroll = document.getElementById('nav')
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    scroll.classList.add("affix");
+  } else {
+    scroll.classList.remove("affix");
+  }
+}
 
 
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -14,7 +24,7 @@
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
           $('html, body').animate({
-            scrollTop: (target.offset().top - 71)
+            scrollTop: (target.offset().top - 60)
           }, 1000, "easeInOutExpo");
           return false;
         }

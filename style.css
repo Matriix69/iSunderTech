@@ -10,6 +10,12 @@ html, body {
     box-sizing: border-box;
     word-wrap:break-word;
 }
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 
 /***********************************************************************
@@ -107,7 +113,6 @@ html, body {
     background-size: cover;
     margin: 0;
     padding:0;
-
 }
 .intro p{
     font-family: 'Montserrat', sans-serif;
@@ -136,7 +141,7 @@ html, body {
 .header2{
     font-family: 'Paytone One', sans-serif;
     font-size: 6rem;
-    color: #C5CED2;
+    color: #C2C2C2;
     text-align: center;
     padding: 0 0 2rem 0;
     
@@ -238,7 +243,7 @@ technology
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   align-content: center;
 }
@@ -253,7 +258,7 @@ technology
 }
 
 .box0 > img {
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 500px;
   margin-bottom: 1rem;
@@ -266,8 +271,9 @@ technology
   font-size: 16px !important;
   letter-spacing: .02em !important;
   text-align: left;
-  line-height: 40px !important;
-} h5{
+  line-height: 1.7 !important;
+} 
+h5{
   font-weight: 700;
 }
 #more {display: none;}
@@ -355,8 +361,41 @@ technology
 .submit-btn:hover{
     color: #099268;
 }
+/* #contact{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+} */
+.error{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  
+}
 
-
+#error:empty{
+  display: none;
+  
+}
+.success{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
 
 /* ************************************
 form style
@@ -473,8 +512,8 @@ form style
 
   .btn-outline-light {
     color: #f8f9fa;
-    border-color: #f8f9fa;
-    border-radius: 500px;
+    border:3px solid #f8f9fa;
+    border-radius: 100%;
     padding: 0.9rem 1rem;
   }
   
@@ -483,7 +522,21 @@ form style
   }
 
 /*media queries */
-
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
 @media only screen and (max-width: 991px){
 	.intro h1{
         font-size: 1.5rem;
