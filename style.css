@@ -546,7 +546,7 @@ label{
     border-top-right-radius: 3px;
     background:
       linear-gradient(90deg, #5bd485, #5bd485) center bottom/0 0.15em no-repeat,
-      linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+      linear-gradient(90deg, rgba(238, 238, 238, 0.247), rgba(238, 238, 238, 0.247)) left bottom/100% 0.15em no-repeat,
       linear-gradient(90deg, #0d0c0c, #0d0c0c) left bottom/100% no-repeat;
     transition: background-size 0.3s ease;
   }
@@ -557,7 +557,7 @@ label{
     border-top-right-radius: 3px;
     background:
       linear-gradient(90deg, #5bd485, #5bd485) center bottom/0 0.15em no-repeat,
-      linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+      linear-gradient(90deg, rgba(238, 238, 238, 0.247),rgba(238, 238, 238, 0.247)) left bottom/100% 0.15em no-repeat,
       linear-gradient(90deg, #0d0c0c, #0d0c0c) left bottom/100% no-repeat;
     transition: background-size 0.3s ease;
   }

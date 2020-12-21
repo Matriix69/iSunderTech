@@ -30,10 +30,10 @@ burger.addEventListener("click", function(){
 
 
 const links = document.querySelector('.trigger')
-  console.log(links)
 
   links.addEventListener("click", () => {
       menu.classList.remove("active");
+      burger.classList.remove("toggle")
   })
 
   
@@ -66,27 +66,3 @@ ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', d
 ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
 ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
 
-// cubic-bezier(.39,.575,.565,1)
-
-(function() {
-  'use strict';
-
-  var section = document.querySelectorAll(".sectionn");
-  var sections = {};
-  var i = 0;
-
-  Array.prototype.forEach.call(section, function(e) {
-    sections[e.id] = e.offsetTop;
-  });
-
-  window.onscroll = function() {
-    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-    for (i in sections) {
-      if (sections[i] <= scrollPosition) {
-        document.querySelector('.active').setAttribute('class', ' ');
-        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-      }
-    }
-  };
-})();
