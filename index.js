@@ -1,4 +1,4 @@
-  window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()};
 
 //   const scrolling = () => {
 //     const scroll = document.getElementsByClassName('navbar')
@@ -9,8 +9,8 @@
 //   }  
 // }
 function scrollFunction() {
-  const scroll = document.getElementById('nav')
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  const scroll = document.querySelector('.navbar')
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     scroll.classList.add("affix");
   } else {
     scroll.classList.remove("affix");
@@ -18,49 +18,75 @@ function scrollFunction() {
 }
 
 
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: (target.offset().top - 60)
-          }, 1000, "easeInOutExpo");
-          return false;
-        }
-      }
-    });
+var burger = document.querySelector(".burger");
+var menu = document.querySelector(".menu");
 
-    $('.js-scroll-trigger').click(function() {
-      $('.navbar-collapse').collapse('hide');
-    });
+burger.addEventListener("click", function(){
+  menu.classList.toggle("active");
 
-    function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
-    
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
+  burger.classList.toggle('toggle')
+})
+
+
+
+const links = document.querySelector('.trigger')
+  console.log(links)
+
+  links.addEventListener("click", () => {
+      menu.classList.remove("active");
+  })
+
+  
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+ScrollReveal().reveal('.scroll', {delay: 300, origin: 'bottom', distance: '10px', duration: 1500, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.scroll2', {delay: 500, origin: 'bottom', distance: '10px', duration: 1500, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.scroll3', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.scroll4', {delay: 600, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.scroll5', {delay: 700, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.header', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.box1', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.boxgrid', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+
+// cubic-bezier(.39,.575,.565,1)
+
+(function() {
+  'use strict';
+
+  var section = document.querySelectorAll(".sectionn");
+  var sections = {};
+  var i = 0;
+
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+  window.onscroll = function() {
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    for (i in sections) {
+      if (sections[i] <= scrollPosition) {
+        document.querySelector('.active').setAttribute('class', ' ');
+        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
       }
     }
-
-
-
-// ScrollReveal().reveal('.scroll', {delay: 300, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-// ScrollReveal().reveal('scroll1', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-
-// ScrollReveal().reveal('.scroll2', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-// ScrollReveal().reveal('.scroll3', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-
-// ScrollReveal().reveal('img', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-// ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-// ScrollReveal().reveal('.contact-form', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-// ScrollReveal().reveal('.scroll5', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
-// ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '30px', easing: 'cubic-bezier(0.5, 0, 0, 1)'})
+  };
+})();

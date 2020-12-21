@@ -7,99 +7,76 @@
   <meta name="author" content="Matrix" />
   <title>iSunder Tech</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,700;0,900;1,800&display=swap" rel="stylesheet">
-  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-  <script src="./index.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
   <script src="https://kit.fontawesome.com/e5672510a3.js" crossorigin="anonymous"></script>
   
 </head>
 <body >
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="nav" data-toggle="affix">
-    <div class="container">
-      <a class="navbar-brand pr-5" href="#">iSunder Tech</a>
-      <button class="navbar-toggler menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link cool-link js-scroll-trigger" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link cool-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link cool-link js-scroll-trigger" href="#tech">Tech</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link cool-link js-scroll-trigger" href="#team">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link cool-link js-scroll-trigger" href="#contact">contact</a>
-          </li>
-        </ul>
-
-        <ul  class="navbar-nav flex-row justify-content-center">
-          <li class="nav-item">
-          <a href="http://www.Facebook.com/igtservices" class="nav-link"><i class="fa fa-facebook"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fa fa-youtube"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="https://www.linkedin.com/company/isunder-green-technology-services" class="nav-item nav-link"><i class="fab fa-fw fa-linkedin-in"></i></a>
-          </li>
-        </ul>
-      </div>
-    </diV>
+  <nav class="navbar">
+		<div class="inner_navbar container">
+			<div class="logo">
+				<a href="#">Isunder <span>Tech</span></a>
+			</div>
+			<div class="menu">
+				<ul class="trigger">
+					<li><a href="#home" class="cool-link active">Home</a></li>
+					<li><a href="#about" class="cool-link ">About</a></li>
+					<li><a href="#tech" class="cool-link ">Project</a></li>
+					<li><a href="#team" class="cool-link ">Team</a></li>
+					<li><a href="#contact" class="cool-link ">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="burger">
+      <div class="line1"></div>
+      <div class="line3"></div>
+    </div>
   </nav>
 
   <!-- header  -->
-  <header id="home" class="intro">
+  <header id="home" class="intro sectionn">
     <div class="container">
       <h1 class="scroll">
         An Electric Vehicle Engine Manufacturing And Retrofit Company.
       </h1>
       <p class="scroll2">
-        Find out <a href="#about" class="cool-link js-scroll-trigger">who we are</a> and <a href="#contact"  class="cool-link js-scroll-trigger">how we can help.</a>
+        Find out <a href="#about" class="cool-link ">who we are</a> and <a href="#contact"  class="cool-link">how we can help.</a>
       </p>
     </div>
   </header>
 
-  <section id="about" class="">
+  <section id="about" class="sectionn">
     <div class="container section-end"> 
         <h2 class="header">Be Part Of Us</h2>
         <div class="box-wrapper0">
-          <div class="box0">
-            <img src="./img/about3.svg" alt="about us" />
-              <h5 class="">who we are</h5>
+          <div class="box0 scroll3">
+            <img src="./img/weare.svg" alt="about us" />
+              <h3 class="">who we are</h3>
               <p>
                 Isunder Tech is a company that arose out of humble beginnings; our three young Cofounders hoping to help the proliferation of electric vehicles.<span id="dots">...</span><span id="more">
                   Through research, we found that a concept called range anxiety was a key culprit limiting Electric Vehicle uptake and use. <br></br>
                   Leveraging our diverse backgrounds and expertise, we looked at the weaknesses of the market in addressing this issue and created a solution – The Switched Mode Power e-motor.
-                  After hours upon hours of brainstorming sessions and marketanalysis, we came up with some key differentiators to allow us to succeed in a growing industry. <br></br>
-                  Thus, Isunder Tech  was belched forth. At Isunder Tech, we manufacture (as well as install for retrofit services) smart, efficient and cost-effective electric motors and controllers for Electric Vehicle use.
-                  </span> 
+                  After hours upon hours of brainstorming sessions and marketanalysis, we came up with some key differentiators to allow us to succeed in a growing industry. 
+                  Thus, Isunder Tech  was belched forth. <br></br>At Isunder Tech, we manufacture (as well as install for retrofit services) smart, efficient and cost-effective electric motors and controllers for Electric Vehicle use.
+                  </span> <button onclick="myFunction()" id="myBtn">Read more</button>
               </p>       
-              <button onclick="myFunction()" id="myBtn">Read more</button>
+              
           </div>
-          <div class="box0">
-            <img src="./img/about1.svg" alt="about us" />
-              <h5 class="">Our Mission</h5>
+          <div class="box0 scroll4">
+            <img src="./img/mission.svg" alt="about us" />
+              <h3 class="">Our Mission</h3>
               <p>
                 Accelerating the transport industry's transition from fossil propulsion to clean technologies.
               </p>       
           </div>
-          <div class="box0">
-            <img src="./img/about2.svg" alt="about us" />
-              <h5 class="">Our Vision</h5>
+          <div class="box0 scroll5">
+            <img src="./img/vision.svg" alt="about us" />
+              <h3 class="">Our Vision</h3>
               <p>
                 Solving the limitations of Electric vehicles through integrated, smart and efficient technologies.
               </p>       
@@ -110,22 +87,22 @@
  
 
 <!-- Projects -->
-<section id="tech" class="section section-end">
-  <div class="container scroll7"> 
-      <h2 class="header2">Our Technology</h2>
+<section id="tech" class="section sectionn section-end">
+  <div class="container"> 
+      <h2 class="header">Our Technology</h2>
           <div class="box-wrapper1">
             <div class="box1">
               <h2 class="">Switched Mode Power Technology</h2>
               <p class=""> 
                 Electric Vehicles are in high demand around the world as a pollution-free and clean means of transportation. When efficiency and range performance of an Electric 
                 Vehicle is of great concern, they are typically powered through the use of a class of costly electric motors; Brushless Direct Current (BLDC) motors. </br></br>However, 
-                Electric Vehicle technology has not gained widespread use because of high cost and inability to cover long distances per battery bank charge. </br></br>to combat this problem, 
-                Isunder Tech proposes the use of an <b>inexpensive</b>, yet <b>highly efficient</b> and <b>smart</b> Switched Mode Power (SMP) e-motor that would replace the BLDC motor. </br></br>
+                Electric Vehicle technology has not gained widespread use because of high cost and inability to cover long distances per battery bank charge. to combat this problem, 
+                Isunder Tech proposes the use of an <b>inexpensive</b>, yet <b>highly efficient</b> and <b>smart</b> Switched Mode Power (SMP) e-motor that would replace the BLDC motor. 
                 the SMP motor has been engineered upon the foundation of a Switched Mode Power technology known for their high levels of efficiency.
 
                 The SMP e-motor efficiency is increased and overall power consumption of the motor is reduced, thus providing enhanced range performance for your Electric Vehicle!</br></br>
                 
-                As the Electric Vehicle engine of the future, the SMP motor practically presents the advantages of an extended range performance over a smaller unit of battery bank size (making E-Vehicles more cost effective and affordable). </br></br> 
+                As the Electric Vehicle engine of the future, the SMP motor practically presents the advantages of an extended range performance over a smaller unit of battery bank size (making E-Vehicles more cost effective and affordable).
                 With fewer batteries on-board, E-Vehicle will become lighter in weight, accelerate faster, smarter, recharge within a shorter period of time and cost lesser to manufacture.
               
               </p>
@@ -141,18 +118,18 @@
 </section>
 
 <!-- team section -->
-<section id="team" class="">
+<section id="team" class="sectionn">
   <div class="container section-end"> 
       <h2 class="header">Meet The Team</h2>
         <div class="container box-wrapper">
             <div class="box">
               <img src="./img/paul.jpg" alt="paul's photo" />
-                <h6 class="header-small">Ogah Abeni</h6>
+                <h4 class="header-small">Ogah Abeni</h4>
                 <p>CEO</p>             
             </div>
             <div class="box">
               <img src="./img/sam.jpg" alt="Sam's photo" />
-                <h6 class="header-small">Lawal Samuel</h6>
+                <h4 class="header-small">Lawal Samuel</h4>
                 <p>Technical Director</p>             
             </div>
         </div> 
@@ -161,86 +138,77 @@
 
 <!-- contact -->
 
-<section class="section section-end-contact" id="contact">
+<section class="section sectionn section-end-contact" id="contact">
   <div class="container">
-      <!-- Contact Section Heading-->
-      <h2 class="header2">Call us to Action</h2>
-      <!-- Contact Section Form-->
-      <div class="">
+  <!-- Contact Section Heading-->
+  <h2 class="header">Call us to Action</h2>    
+      <form class="scroll6" id="form"> 
         <div id="error" class="error"></div>
-        <div class="col-lg-6 mx-auto ">
-          <form id="form"> 
-            <div>
-              <label class="custom-field two">
-                <input type="name" id="from_name" required/>
-                <span class="placeholder">Name</span>
-              </label>
-            </div>
-            <div>
-              <label class="custom-field two">
-                <input type="email" id='email' required/>
-                <span class="placeholder">Email</span>
-              </label>
-            </div>
-            <div>
-              <label class="custom-field two">
-                <textarea name="message" id="message" cols="0" rows="0" required></textarea>
-                <span class="placeholder">Message</span>
-              </label>
-            </div>
-            <div class=" pb-5">
-              <!-- <input class="submit-btn" type="submit" value="Call To Action" name=""> -->
-              <button class="submit-btn" onclick=sendMail() type="submit">Submit</button>
-            </div>
-          </form>
+          <label class="custom-field two">
+            <input type="name" id="from_name" required/>
+            <span class="placeholder">Name</span>
+          </label>
+          <label class="custom-field two">
+            <input type="email" id='email' required/>
+            <span class="placeholder">Email</span>
+          </label>
+          <label class="custom-field two">
+            <textarea name="message" id="message" required></textarea>
+            <span class="placeholder">Message</span>
+          </label>
+        <div class="">
+          <button class="submit-btn" onclick=sendMail() type="submit">Submit</button>
         </div>
-      </div> 
+      </form>
   </div>
 </section>
 
 <!-- footer -->
-<footer class="footer text-center">
+<footer>
   <div class="container">
-      <div class="row">
+    <div class="footer">
           <!-- Footer Location-->
-          <div class="col-lg-6 mb-5 mb-lg-0 scroll5">
-              <h4 class="text-uppercase mb-4">Location</h4>
-              <p class="lead mb-0">
-                powa plaza, Ogui, Enugu State, Nigeria.
-              </p>
-          </div>
-          <!-- Footer Social Icons-->
-          <div class="col-lg-6 mb-5 mb-lg-0 scroll6">
-              <h4 class="text-uppercase mb-4">Around the Web</h4>
-              <a class="btn btn-outline-light btn-social mx-1" href="http://www.Facebook.com/igtservices"><i class="fab fa-fw fa-facebook-f"></i></a>
-              <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-              <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-youtube"></i></a>
-              <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/company/isunder-green-technology-services"><i class="fab fa-fw fa-linkedin-in"></i></a>
-              
-          </div>      
-      </div>
+    <div class="boxfooter">
+        <h4 class="footerheader">Location</h4>
+        <p class="footertext">
+          powa plaza, Ogui, Enugu State, Nigeria.
+        </p>
+    </div>
+
+    <div class="boxfooter">
+      <h4 class="footerheader">Contact</h4>
+      <p class="footertext">
+        +234 803 194 6843
+      </p><br>
+      <p class="footertext">
+        hello@isundertech.com
+      </p>
+    </div>
+    <!-- Footer Social Icons-->
+    <div class="boxfooter">
+        <h4 class="footerheader">Find us anywhere </h4><br>
+        <a class="btn-outline-light" href="http://www.Facebook.com/igtservices"><i class="fab fa-fw fa-facebook-f"></i></a>
+        <a class="btn-outline-light" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+        <a class="btn-outline-light" href="#!"><i class="fab fa-fw fa-youtube"></i></a>
+        <a class="btn-outline-light" href="https://www.linkedin.com/company/isunder-green-technology-services"><i class="fab fa-fw fa-linkedin-in"></i></a>
+        
+    </div>   
+    </div>   
   </div>
 </footer>
 
-<div class="copyright py-4 text-center text-white">
+<div class="copyright">
   <div class="container"><small>Copyright © Isunder Tech 2020</small></div>
 </div>
 
+<script src="./index.js"></script>
 <script type="text/javascript" src="./form.js"></script>
+<script src="https://kit.fontawesome.com/e5672510a3.js" crossorigin="anonymous"></script>
 <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 <script type="text/javascript">
   (function() {
   emailjs.init("user_PxSsadZgFpBu2FGtHlaxw");
   })();
 </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="index.js"></script>
-<script src="https://kit.fontawesome.com/e5672510a3.js" crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
 </body>
 </html>
