@@ -100,11 +100,11 @@ section:before {
 
 }
 .toggle .line1{
-  transform: rotate(-45deg) translate(-1px, 4.5px);
+  transform: rotate(-20deg) translate(-1px, 3.3px);
 }
 
 .toggle .line3{
-  transform: rotate(45deg) translate(-1px, -4.5px);
+  transform: rotate(20deg) translate(-1px, -3.3px);
 }
 
 .navbar .logo a{
@@ -744,6 +744,24 @@ label{
   .dark-light-btn spam{
     display: none;
   }
+  .navbar .menu .trigger .cool-link:hover::after {
+    width:0;
+  } 
+}
+/*   
+  .cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #a8dab5;
+    transition: width .3s;
+  }
+  
+  .cool-link:hover::after {
+    width: 10%;
+    transition: width .3s;
+  } */
 }
 @media(max-width: 320px){
   .grid-wrapper {
