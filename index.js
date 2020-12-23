@@ -54,15 +54,32 @@ function myFunction() {
   }
 }
 
-ScrollReveal().reveal('.scroll', {delay: 300, origin: 'bottom', distance: '10px', duration: 1500, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.scroll2', {delay: 500, origin: 'bottom', distance: '10px', duration: 1500, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.scroll3', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.scroll4', {delay: 600, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.scroll5', {delay: 700, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.header', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.box1', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.boxgrid', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
-ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)'})
+//light theme switch
+var btn = document.querySelector('.dark-light-btn');
+console.log(btn)
+btn.addEventListener('click', function() {
+  trans()
+  
+  document.body.classList.toggle("light-theme");
+  btn.classList.toggle("inactive");
+})
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+}
+
+ScrollReveal().reveal('.scroll', {delay: 300, origin: 'bottom', distance: '10px', duration: 1500, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.scroll2', {delay: 500, origin: 'bottom', distance: '10px', duration: 1500, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.scroll3', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.scroll4', {delay: 600, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.scroll5', {delay: 700, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.header', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.box1', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.boxgrid', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 
