@@ -32,7 +32,7 @@ body {
   --text-green: #5bd485;
   --burger: rgba(255, 255, 255, 0.829);
   --logo-bg: #1d1d1d;
-  --intro:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  --intro:#1b1b1b;
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(238, 238, 238, 0.247), rgba(238, 238, 238, 0.247);
 }
@@ -44,7 +44,7 @@ body.light-theme{
   --text-green: #099268;
   --burger: #1a1a1a;
   --logo-bg: #f0f0f0;
-  --intro: linear-gradient( rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9) );
+  --intro: var(--bg);
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(18, 18, 18, 0.247), rgba(18, 18, 18, 0.247);
 }
@@ -55,7 +55,7 @@ body.light-theme{
   margin-left: auto;
 }
 section:before {
-    height: 40px;
+    height: 30px;
     content: "";
     display:block;
     visibility: hidden;
@@ -82,12 +82,12 @@ section:before {
 	width: 100%;
 	height: 100%;
 }
-.navbar .logo{
-  margin-right: auto;
-}
 
 .burger{
     display: none;
+    background-color: var(--bg-alt);
+    padding: 5px;
+    border-radius: 5px;
   }
   
 .burger div{
@@ -106,17 +106,41 @@ section:before {
 .toggle .line3{
   transform: rotate(20deg) translate(-1px, -3.3px);
 }
+.navbar h1{
+  display: flex;
+  align-items: center;
+  background: var(--logo-bg,#1d1d1d);
+  height: 45px;
+  border-radius: 25px;
+  font-size: 1.5em;
+  margin: 0;
+  padding-right: 1rem;
+}
+.navbar h1{
+  margin-right: auto;
+}
+.navbar h1 img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #171c1b;
+  padding: 6px;
 
-.navbar .logo a{
+}
+
+.navbar h1 a{
+  display: inline-block;
   font-family: 'Paytone One', sans-serif;
 	font-size: 24px;
   color: var(--text);
   background-color: var(--logo-bg);
-  padding: 10px 35px;
+  /* padding: 10px 35px; */
   border-radius: 25px;
+
 }
 
-.navbar .logo a span{
+.navbar h1 a span{
 	color: var(--text-green);
 }
 
@@ -240,21 +264,25 @@ dark mode btn
 /***********************************************************************
  * header section
  **********************************************************************/
-.intro {
-  height: 70vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* font-family: 'Paytone One', sans-serif; */
-  font-family: 'Oswald', sans-serif;
-  font-weight: 600;
+#home{
+  font-family: 'Paytone One', sans-serif;
+  /* font-family: 'Oswald', sans-serif; */
   color: var(--text);
   text-align: center;
-  background:  var(--intro), url(./img/siteheader2.jpg) no-repeat center center fixed; 
+  background-color: var(--intro)
+}
+ .intro {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+;
+  /* background:  var(--intro), url(./img/siteheader2.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
   margin: 0;
   padding:0;
 }
@@ -262,17 +290,22 @@ dark mode btn
     font-family: 'Mulish', sans-serif; 
     color: var(--sub-text);
     font-weight: 600;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 } 
 .intro p a{
     text-decoration: none;
     color: var(--text-green);
-    background-color: var(--bg-alt);
-    padding: 5px;
-    border-radius: 1rem;
 } 
-.cover {
-    width: 30rem;
+.intro-box {
+  padding: 0.2rem;
+  font-size: 1em;
+  text-align: center;
+}
+
+.intro-box > img {
+  width: 200px;
+  height: 200px;
+  
 }
 
 /***********************************************************************
@@ -441,7 +474,7 @@ h5{
     padding: 5rem 0rem;
 }
 .section-end-contact{
-    padding: 2rem 0 0 0rem;
+    padding: 5rem 0 0 0rem;
 }
 
 /***********************************************************************
@@ -740,41 +773,20 @@ label{
     display: block;
     margin-left: auto;
     padding: 0, 15px;
+
   }
-  .dark-light-btn spam{
-    display: none;
+  .dark-light-btn:after {
+    margin-left: 2px;
   }
+  /* .dark-light-btn i {
+    padding: 0, 15px;
+  } */
+ 
   .navbar .menu .trigger .cool-link:hover::after {
     width:0;
   } 
 }
-/*   
-  .cool-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #a8dab5;
-    transition: width .3s;
-  }
-  
-  .cool-link:hover::after {
-    width: 10%;
-    transition: width .3s;
-  } */
-}
-@media(max-width: 320px){
-  .grid-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-  .navbar .logo a{
-    font-size: 19px;
-    color: var(--text);
-    background-color: var(--logo-bg);
-    padding: 6px 25px;
-    border-radius: 25px;
-  }
-}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -814,6 +826,9 @@ label{
        -o-transition:padding 0.4s linear;         
        transition:padding 0.4s linear;  
      }
+     .dark-light-btn spam{
+      display: none;
+    }
      
         
 }
@@ -833,6 +848,44 @@ label{
       }
       
   }
+
+@media (max-width: 450px){
+  .grid-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .navbar h1 a{
+    font-size:20px;
+  }
+}
+@media (max-width: 330px){
+  .navbar h1 a{
+    font-size:15px;
+  }
+  .intro-box h1 {
+    font-size: 20px;
+  }
+  
+  .intro-box > img {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    /* margin-bottom: 0.5rem; */
+    
+  }
+}
+@media (max-width: 290px){
+  .navbar a{
+    font-size:10px;
+  }
+  .navbar h1{
+    padding: 0;
+    background: none;
+  }
+  .navbar h1 a{
+    display: none;
+  }
+}
 
 
 
