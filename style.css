@@ -845,6 +845,11 @@ label{
       }
       
   }
+  @media (max-width: 550px){
+    .intro{
+      height: 100vh;
+    }
+  }
 
 @media (max-width: 450px){
   .grid-wrapper {
@@ -853,8 +858,6 @@ label{
   .navbar h1 a{
     font-size:20px;
   }
-}
-@media(max-width:370px){
   .intro{
     height: 100vh;
   }
@@ -875,9 +878,7 @@ label{
     /* margin-bottom: 0.5rem; */
     
   }
-  .intro{
-    height: 100vh;
-  }
+
 }
 @media (max-width: 290px){
   .navbar a{
