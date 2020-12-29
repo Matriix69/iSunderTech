@@ -32,7 +32,7 @@ body {
   --text-green: #5bd485;
   --burger: rgba(255, 255, 255, 0.829);
   --logo-bg: #1d1d1d;
-  --intro: var(--bg);
+  --intro: #1d1d1d;
   /* --intro: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(./img/siteheader3.jpg) no-repeat center center fixed;  */
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(238, 238, 238, 0.247), rgba(238, 238, 238, 0.247);
@@ -45,7 +45,8 @@ body.light-theme{
   --text-green: #099268;
   --burger: #1a1a1a;
   --logo-bg: #f0f0f0;
-  --intro: linear-gradient( rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9) ), url(./img/siteheader3.jpg) no-repeat center center fixed; 
+  --intro: var(--bg);
+  /* --intro: linear-gradient( rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9) ), url(./img/siteheader3.jpg) no-repeat center center fixed;  */
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(18, 18, 18, 0.247), rgba(18, 18, 18, 0.247);
 }
