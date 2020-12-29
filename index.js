@@ -10,10 +10,13 @@ window.onscroll = function() {scrollFunction()};
 // }
 function scrollFunction() {
   const scroll = document.querySelector('.navbar')
+  const scroll2 = document.querySelector('.bgscroll')
   if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     scroll.classList.add("affix");
+    scroll2.classList.add("affix2");    
   } else {
     scroll.classList.remove("affix");
+    scroll2.classList.remove("affix2");
   }
 }
 
@@ -56,7 +59,6 @@ function myFunction() {
 
 //light theme switch
 var btn = document.querySelector('.dark-light-btn');
-console.log(btn)
 btn.addEventListener('click', function() {
   trans()
   

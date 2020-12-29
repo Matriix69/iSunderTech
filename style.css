@@ -32,7 +32,7 @@ body {
   --text-green: #5bd485;
   --burger: rgba(255, 255, 255, 0.829);
   --logo-bg: #1d1d1d;
-  --intro:#1b1b1b;
+  --intro: linear-gradient( rgba(0, 0, 0, 0.85555555), rgba(0, 0, 0, 0.85555555) ), url(./img/siteheader3.jpg) no-repeat center center fixed; 
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(238, 238, 238, 0.247), rgba(238, 238, 238, 0.247);
 }
@@ -44,7 +44,7 @@ body.light-theme{
   --text-green: #099268;
   --burger: #1a1a1a;
   --logo-bg: #f0f0f0;
-  --intro: var(--bg);
+  --intro: linear-gradient( rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9) ), url(./img/siteheader3.jpg) no-repeat center center fixed; 
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(18, 18, 18, 0.247), rgba(18, 18, 18, 0.247);
 }
@@ -109,7 +109,6 @@ section:before {
 .navbar h1{
   display: flex;
   align-items: center;
-  background: var(--logo-bg,#1d1d1d);
   height: 45px;
   border-radius: 25px;
   font-size: 1.5em;
@@ -124,8 +123,8 @@ section:before {
   width: 40px;
   border-radius: 50%;
   margin-right: 5px;
-  background-color: var(--bg);
   padding: 6px;
+  background-color: var(--bg);
 
 }
 
@@ -134,8 +133,6 @@ section:before {
   font-family: 'Paytone One', sans-serif;
 	font-size: 24px;
   color: var(--text);
-  background-color: var(--logo-bg);
-  /* padding: 10px 35px; */
   border-radius: 25px;
 
 }
@@ -186,7 +183,9 @@ section:before {
   transition:padding 0.4s linear; 
   transition: all 0.4s; 
 }
-
+.affix2{
+  background: var(--logo-bg,#1d1d1d);
+}
 /* link hover animation*/
   
 .cool-link {
@@ -270,16 +269,23 @@ dark mode btn
   font-family: 'Paytone One', sans-serif;
   color: var(--text);
   text-align: center;
-  background-color: var(--bg)
+  /* background-color: var(--bg) */
+  background: var(--intro); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }
  .intro {
-  height: 100vh; 
+  height: 60vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding:0;
+  padding-top: 60px;
 }
 .intro p{
     font-family: 'Mulish', sans-serif; 
@@ -297,11 +303,11 @@ dark mode btn
   text-align: center;
 }
 
-.intro-box > img {
+/* .intro-box > img {
   width: 200px;
   height: 200px;
   
-}
+} */
 
 /***********************************************************************
  *  text header
@@ -397,11 +403,6 @@ technology
   -moz-transform: rotate(-7deg);
   -o-transform: rotate(-7deg);
   transform: rotate(-7deg);
-}
-
-.boxgrid > img {
-  width: 100%;
-  height: auto;
 }
 
 /*************abouts******************/
