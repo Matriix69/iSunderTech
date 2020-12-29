@@ -32,7 +32,8 @@ body {
   --text-green: #5bd485;
   --burger: rgba(255, 255, 255, 0.829);
   --logo-bg: #1d1d1d;
-  --intro: linear-gradient( rgba(0, 0, 0, 0.85555555), rgba(0, 0, 0, 0.85555555) ), url(./img/siteheader3.jpg) no-repeat center center fixed; 
+  --intro: var(--bg);
+  /* --intro: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(./img/siteheader3.jpg) no-repeat center center fixed;  */
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(238, 238, 238, 0.247), rgba(238, 238, 238, 0.247);
 }
@@ -279,7 +280,7 @@ dark mode btn
   padding: 0;
 }
  .intro {
-  height: 60vh; 
+  height: 80vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,11 +304,11 @@ dark mode btn
   text-align: center;
 }
 
-/* .intro-box > img {
+.intro-box > img {
   width: 200px;
   height: 200px;
   
-} */
+}
 
 /***********************************************************************
  *  text header
@@ -852,6 +853,11 @@ label{
     font-size:20px;
   }
 }
+@media(max-width:370px){
+  .intro{
+    height: 100vh;
+  }
+}
 @media (max-width: 330px){
   .navbar h1 a{
     font-size:15px;
@@ -867,6 +873,9 @@ label{
     margin: 0;
     /* margin-bottom: 0.5rem; */
     
+  }
+  .intro{
+    height: 100vh;
   }
 }
 @media (max-width: 290px){
