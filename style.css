@@ -115,12 +115,12 @@ section:before {
   border-radius: 25px;
   font-size: 1.5em;
   margin: 0;
-  padding-right: 1rem;
+  padding: 1rem 1rem;
 }
 .navbar h1{
   margin-right: auto;
 }
-.navbar h1 img{
+/* .navbar h1 img{
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -128,7 +128,7 @@ section:before {
   padding: 6px;
   background-color: var(--bg);
 
-}
+} */
 
 .navbar h1 a{
   display: inline-block;
