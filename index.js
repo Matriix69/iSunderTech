@@ -22,7 +22,7 @@ function scrollFunction() {
 
 
 var burger = document.querySelector(".burger");
-var menu = document.querySelector(".menu");
+var menu = document.querySelector("ul");
 
 burger.addEventListener("click", function(){
   menu.classList.toggle("active");
