@@ -32,8 +32,8 @@ body {
   --text-green: #5bd485;
   --burger: rgba(255, 255, 255, 0.829);
   --logo-bg: #1d1d1d;
-  --intro: #1d1d1d;
-  /* --intro: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(./img/siteheader3.jpg) no-repeat center center fixed;  */
+  --intro: var(--bg);
+  /* --intro: linear-gradient( rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.89) ), url(./img/siteheader2.jpg) no-repeat center center fixed;  */
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(238, 238, 238, 0.247), rgba(238, 238, 238, 0.247);
 }
@@ -46,7 +46,7 @@ body.light-theme{
   --burger: #1a1a1a;
   --logo-bg: #f0f0f0;
   --intro: var(--bg);
-  /* --intro: linear-gradient( rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9) ), url(./img/siteheader3.jpg) no-repeat center center fixed;  */
+  /* --intro: linear-gradient( rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9) ), url(./img/siteheader2.jpg) no-repeat center center fixed;  */
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(18, 18, 18, 0.247), rgba(18, 18, 18, 0.247);
 }
@@ -68,7 +68,7 @@ section:before {
  **********************************************************************/
  .navbar{
 	width: 100%;
-	background: rgba(255, 255, 255, 0);
+	background: var(--bg);
   position: fixed;
   z-index: 99;
 	top: 0;
@@ -116,6 +116,7 @@ section:before {
   font-size: 1.5em;
   margin: 0;
   padding: 1rem 1rem;
+  background: var(--logo-bg,#1d1d1d);
 }
 .navbar h1{
   margin-right: auto;
@@ -159,7 +160,6 @@ section:before {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1.5px;
-	transition: all 0.4s ease;
 }
 
 .navbar .menu ul li:last-child a{
@@ -185,9 +185,7 @@ section:before {
   transition:padding 0.4s linear; 
   transition: all 0.4s; 
 }
-.affix2{
-  background: var(--logo-bg,#1d1d1d);
-}
+
 /* link hover animation*/
   
 .cool-link {
@@ -761,10 +759,13 @@ label{
 		color: var(--text-green);
 	}
 	.navbar .menu{
-		display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
 	}
 	.navbar .menu.active{
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
   .dark-light-btn {
     display: block;
