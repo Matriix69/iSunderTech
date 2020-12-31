@@ -1,5 +1,6 @@
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() { spyScrolling(); scrollFunction(); };
 
+window.addEventListener('scroll', scrollFunction);
 //   const scrolling = () => {
 //     const scroll = document.getElementsByClassName('navbar')
 //     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -95,4 +96,63 @@ ScrollReveal().reveal('.boxgrid', {delay: 500, origin: 'bottom', distance: '10px
 ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
+
+window.addEventListener('scroll', () =>{
+  const sections = document.querySelectorAll(".hero-bg");
+
+  window.onscroll = () => {
+      const scrollPos =
+      document.documentElement.scrollTop || document.body.scrollTop;
+
+      for (let s in sections)
+      if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos && viewportWidth > 988 ) {
+          const id = sections[s].id;
+          document.querySelector(".active").classList.remove("active");
+          document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
+      }
+  };
+});
+
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+// if (viewportWidth > 988) {
+// 	window.addEventListener('scroll', () =>{
+//     const sections = document.querySelectorAll(".hero-bg");
+  
+//     window.onscroll = () => {
+//         const scrollPos =
+//         document.documentElement.scrollTop || document.body.scrollTop;
+  
+//         for (let s in sections)
+//         if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
+//             const id = sections[s].id;
+//             document.querySelector(".active").classList.remove("active");
+//             document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
+//         }
+//     };
+//   });
+// }
+
+// window.addEventListener('resize', function () {
+// 	viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+// 	if (viewportWidth > 988) {
+// 		window.addEventListener('scroll', () =>{
+//       const sections = document.querySelectorAll(".hero-bg");
+    
+//       window.onscroll = () => {
+//           const scrollPos =
+//           document.documentElement.scrollTop || document.body.scrollTop;
+    
+//           for (let s in sections)
+//           if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
+//               const id = sections[s].id;
+//               document.querySelector(".active").classList.remove("active");
+//               document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
+//           }
+//           else {
+//             console.log('Small viewport');
+//           }
+//       };
+//     });
+// 	} 
+// }, false);
 
