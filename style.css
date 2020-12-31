@@ -156,10 +156,11 @@ section:before {
 	padding: 10px;
 	color: var(--sub-text);
   opacity: .65;
-	text-transform: capitalize;
+	text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
+  position: relative;
 }
 
 .navbar ul li:last-child a{
@@ -463,7 +464,6 @@ h5{
  *  sections
  **********************************************************************/
 .section {
-    height: 70%vh;
     background: var(--bg);
     color: var(--sub-text)
 }
@@ -774,6 +774,7 @@ label{
   }
   .navbar ul li.active a{
     border-bottom: none;
+    display: none;
   }
   .dark-light-btn {
     display: block;
@@ -854,11 +855,6 @@ label{
       }
       
   }
-  @media (max-width: 550px){
-    .intro{
-      height: 100vh;
-    }
-  }
 
 @media (max-width: 450px){
   .grid-wrapper {
@@ -866,9 +862,6 @@ label{
   }
   .navbar h1 a{
     font-size:20px;
-  }
-  .intro{
-    height: 100vh;
   }
 }
 @media (max-width: 330px){

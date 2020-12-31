@@ -97,25 +97,12 @@ ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', d
 ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 
-window.addEventListener('scroll', () =>{
-  const sections = document.querySelectorAll(".hero-bg");
+// var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-  window.onscroll = () => {
-      const scrollPos =
-      document.documentElement.scrollTop || document.body.scrollTop;
-
-      for (let s in sections)
-      if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos && viewportWidth > 988 ) {
-          const id = sections[s].id;
-          document.querySelector(".active").classList.remove("active");
-          document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
-      }
-  };
-});
-
-var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-// if (viewportWidth > 988) {
-// 	window.addEventListener('scroll', () =>{
+// if (viewportWidth <= 988){
+//   document.querySelector(".active").classList.remove("active");
+// }else{
+//   window.addEventListener('scroll', () =>{
 //     const sections = document.querySelectorAll(".hero-bg");
   
 //     window.onscroll = () => {
@@ -132,27 +119,12 @@ var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 //   });
 // }
 
-// window.addEventListener('resize', function () {
-// 	viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-// 	if (viewportWidth > 988) {
-// 		window.addEventListener('scroll', () =>{
-//       const sections = document.querySelectorAll(".hero-bg");
-    
-//       window.onscroll = () => {
-//           const scrollPos =
-//           document.documentElement.scrollTop || document.body.scrollTop;
-    
-//           for (let s in sections)
-//           if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
-//               const id = sections[s].id;
-//               document.querySelector(".active").classList.remove("active");
-//               document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
-//           }
-//           else {
-//             console.log('Small viewport');
-//           }
-//       };
-//     });
-// 	} 
-// }, false);
+// function adjustScrollSpy(){
+//   var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+//   if (viewportWidth <= 989){
+//     document.querySelector(".inactive").classList.remove("active");
+//   }
+// }
+
 
