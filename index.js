@@ -1,14 +1,5 @@
-// window.onscroll = function() { spyScrolling(); scrollFunction(); };
-
 window.addEventListener('scroll', scrollFunction);
-//   const scrolling = () => {
-//     const scroll = document.getElementsByClassName('navbar')
-//     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-//       scroll.classList.add("affix");
-//     } else {
-//       scroll.classList.remove("affix");
-//   }  
-// }
+
 function scrollFunction() {
   const scroll = document.querySelector('.navbar')
   const scroll2 = document.querySelector('.bgscroll')
@@ -58,17 +49,17 @@ function myFunction() {
   }
 }
 
-const btn = document.querySelector(".dark-light-btn");
+const btn = document.querySelector(".theme-toggle-btn");
 
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "light") {
   document.body.classList.add("light-theme");
-  btn.classList.toggle("inactive");
 }
 
+//theme switch
 btn.addEventListener("click", function () {
   document.body.classList.toggle("light-theme");
-  btn.classList.toggle("inactive");
+  btn.classList.toggle("disactive");
   trans()
 
   let theme = "dark";
@@ -85,6 +76,7 @@ let trans = () => {
     }, 1000)
 }
 
+//scroll reveal
 ScrollReveal().reveal('.scroll', {delay: 300, origin: 'bottom', distance: '10px', duration: 1500, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.scroll2', {delay: 500, origin: 'bottom', distance: '10px', duration: 1500, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.scroll3', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
@@ -97,34 +89,30 @@ ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', d
 ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 
-var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-if (viewportWidth <= 988){
-  document.querySelector(".active").classList.remove("active");
-}else{
-  window.addEventListener('scroll', () =>{
-    const sections = document.querySelectorAll(".hero-bg");
-  
-    window.onscroll = () => {
-        const scrollPos =
-        document.documentElement.scrollTop || document.body.scrollTop;
-  
-        for (let s in sections)
-        if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
-            const id = sections[s].id;
-            document.querySelector(".active").classList.remove("active");
-            document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
-        }
-    };
-  });
-}
-
+//scrollspy
 function adjustScrollSpy(){
   var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-  if (viewportWidth <= 989){
+  var removeclass =  document.querySelector(".inactive");
+  if (viewportWidth <= 988){
     document.querySelector(".inactive").classList.remove("active");
-  }
+  }else{
+      const sections = document.querySelectorAll(".hero-bg");
+          const scrollPos =
+          document.documentElement.scrollTop || document.body.scrollTop;
+    
+          for (let s in sections)
+          if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
+              const id = sections[s].id;
+              document.querySelector(".active").classList.remove("active");
+              document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
+          }
+      }
+
 }
 
-
+['scroll', 'resize'].forEach(eventName => {
+  window.addEventListener(eventName, () =>{
+    scrollFunction();
+    adjustScrollSpy();
+  })
+})

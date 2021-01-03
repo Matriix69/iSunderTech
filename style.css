@@ -215,7 +215,7 @@ section:before {
 /* ***************************************************
 dark mode btn
 *************************************************************/
-.dark-light-btn {
+.theme-toggle-btn {
   height: 26px;
   padding: 0 0 0 0px;
   display: flex;
@@ -228,11 +228,11 @@ dark mode btn
   cursor: pointer;
 }
 
-.dark-light-btn{
+.theme-toggle-btn{
   padding-right: 1rem;
 }
 
-.dark-light-btn spam {
+.theme-toggle-btn spam {
   color: var(--sub-text);
   font-weight: 100;
   font-size: .9em;
@@ -240,7 +240,7 @@ dark mode btn
   padding-left: 0.2rem;
   text-transform: capitalize;
 }
-.dark-light-btn i{
+.theme-toggle-btn i{
   color:var(--bg);
   padding: 5px;
   border-radius: 100%;
@@ -248,7 +248,7 @@ dark mode btn
   line-height: 1;
 }
 
-.dark-light-btn:after {
+.theme-toggle-btn:after {
   content: "";
   display: inline-block;
   width: 10px;
@@ -258,7 +258,7 @@ dark mode btn
   margin-left: 10px;
 }
 
-.dark-light-btn.inactive:after {
+.theme-toggle-btn.disactive:after {
   background: #f72626;
 }
 
@@ -476,24 +476,22 @@ h5{
  *  team card
  **********************************************************************/
 .box-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2em .5em;
+  margin: 5rem 0;
 }
  .box {
-    width: 200px;
-    height: auto;
-    background: none;
-    padding: 1rem;
+    
     font-size: 1em;
     text-align: center;
+    line-height: 2;
+
 }
 
 .box > img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
     border-radius: 500px;
     margin-bottom: 1rem;
     
@@ -677,19 +675,14 @@ label{
  }
  .footer {
   background: var(--bg-alt);
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
   padding: 2rem 1rem;
   border-radius: 1rem;
 
   }
   .boxfooter{
-    width: 350px;
-    height: auto;
     background: none;
     padding: 1rem;
     font-size: 0.9em;
@@ -774,18 +767,18 @@ label{
   }
   .navbar ul li.active a{
     border-bottom: none;
-    display: none;
+    color: none;
   }
-  .dark-light-btn {
+  .theme-toggle-btn {
     display: block;
     margin-left: auto;
     padding: 0, 15px;
 
   }
-  .dark-light-btn:after {
+  .theme-toggle-btn:after {
     margin-left: 2px;
   }
-  /* .dark-light-btn i {
+  /* .theme-toggle-btn i {
     padding: 0, 15px;
   } */
  
@@ -833,7 +826,7 @@ label{
        -o-transition:padding 0.4s linear;         
        transition:padding 0.4s linear;  
      }
-     .dark-light-btn spam{
+     .theme-toggle-btn spam{
       display: none;
     }
      
