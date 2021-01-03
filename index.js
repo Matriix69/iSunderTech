@@ -97,34 +97,34 @@ ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', d
 ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 
-// var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-// if (viewportWidth <= 988){
-//   document.querySelector(".active").classList.remove("active");
-// }else{
-//   window.addEventListener('scroll', () =>{
-//     const sections = document.querySelectorAll(".hero-bg");
+if (viewportWidth <= 988){
+  document.querySelector(".active").classList.remove("active");
+}else{
+  window.addEventListener('scroll', () =>{
+    const sections = document.querySelectorAll(".hero-bg");
   
-//     window.onscroll = () => {
-//         const scrollPos =
-//         document.documentElement.scrollTop || document.body.scrollTop;
+    window.onscroll = () => {
+        const scrollPos =
+        document.documentElement.scrollTop || document.body.scrollTop;
   
-//         for (let s in sections)
-//         if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
-//             const id = sections[s].id;
-//             document.querySelector(".active").classList.remove("active");
-//             document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
-//         }
-//     };
-//   });
-// }
+        for (let s in sections)
+        if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
+            const id = sections[s].id;
+            document.querySelector(".active").classList.remove("active");
+            document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
+        }
+    };
+  });
+}
 
-// function adjustScrollSpy(){
-//   var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+function adjustScrollSpy(){
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-//   if (viewportWidth <= 989){
-//     document.querySelector(".inactive").classList.remove("active");
-//   }
-// }
+  if (viewportWidth <= 989){
+    document.querySelector(".inactive").classList.remove("active");
+  }
+}
 
 
