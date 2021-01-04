@@ -725,7 +725,7 @@ label{
 	}
 	.navbar ul{
 		position: absolute;
-		top: 70px;
+		top: 80px;
 		left: 0;
 		display: block;
 		background: var(--bg);
@@ -736,7 +736,10 @@ label{
 	}
 	.navbar ul li a{
 		width: 100%;
-		padding: 12px;
+    padding: 12px;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 1rem;
   }
 	.navbar .burger{
 		display: block;
