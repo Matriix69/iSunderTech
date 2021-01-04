@@ -738,8 +738,7 @@ label{
 		width: 100%;
     padding: 12px;
     opacity: 1;
-    font-weight: bold;
-    font-size: 1rem;
+    letter-spacing: normal;
   }
 	.navbar .burger{
 		display: block;
