@@ -1,5 +1,4 @@
-window.addEventListener('scroll', scrollFunction);
-
+//scroll affix function
 function scrollFunction() {
   const scroll = document.querySelector('.navbar')
   const scroll2 = document.querySelector('.bgscroll')
@@ -12,7 +11,7 @@ function scrollFunction() {
   }
 }
 
-
+//burger toggle and animation
 var burger = document.querySelector(".burger");
 var menu = document.querySelector("ul");
 
@@ -23,7 +22,7 @@ burger.addEventListener("click", function(){
 })
 
 
-
+//hide nav links on click
 const links = document.querySelector('.trigger')
 
   links.addEventListener("click", () => {
@@ -33,6 +32,7 @@ const links = document.querySelector('.trigger')
 
   
 
+//read more and readless function
 function myFunction() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
@@ -95,7 +95,8 @@ function adjustScrollSpy(){
   var removeclass =  document.querySelector(".inactive");
   if (viewportWidth <= 988){
     document.querySelector(".inactive").classList.remove("active");
-  }else{
+  }
+  else{
       const sections = document.querySelectorAll(".hero-bg");
           const scrollPos =
           document.documentElement.scrollTop || document.body.scrollTop;
@@ -110,7 +111,7 @@ function adjustScrollSpy(){
 
 }
 
-['scroll', 'resize'].forEach(eventName => {
+['load','scroll', 'resize'].forEach(eventName => {
   window.addEventListener(eventName, () =>{
     scrollFunction();
     adjustScrollSpy();

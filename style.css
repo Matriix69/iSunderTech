@@ -66,6 +66,15 @@ section:before {
 /***********************************************************************
  *  Nav Bar
  **********************************************************************/
+ @font-face {
+  font-family: 'OPTIAlternateOne';
+  src: url('fonts/OPTIAlternateOne.woff2') format('woff2'),
+      url('fonts/OPTIAlternateOne.woff') format('woff'),
+      url('fonts/OPTIAlternateOne.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
  .navbar{
 	width: 100%;
 	background: var(--bg);
@@ -149,18 +158,22 @@ section:before {
 }
 
 .navbar ul li a{
+  font-family: 'OPTIAlternateOne';
 	width: auto;
-	margin-right: 10px;
+	/* margin-right: 10px; */
 	display: block;
 	text-align: center;
-	padding: 10px;
+  padding: 10px;
 	color: var(--sub-text);
   opacity: .65;
 	text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  position: relative;
+  font-size: 1em;
+  letter-spacing: 2px;
+  background:linear-gradient(to bottom, var(--text-green) 0%, var(--text-green) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  transition: background-size .3s;
 }
 
 .navbar ul li:last-child a{
@@ -172,9 +185,9 @@ section:before {
   opacity: 1;
 }
 .navbar ul li.active a{
-  color: var(--text-green);
+  color: var(--bg);
   opacity: 1;
-  border-bottom: 1px solid var(--text-green);
+  background-size: 4px 50px;
 }
   
 .affix {
@@ -312,6 +325,14 @@ dark mode btn
   height: 200px;
   
 }
+.arrow{
+  position:absolute;
+  bottom: 10%;
+  cursor: pointer;
+  width: 100%;
+  font-size: 25px;
+}
+
 
 /***********************************************************************
  *  text header
@@ -388,25 +409,22 @@ technology
 }
 .grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
   grid-gap: 20px;
+  margin-top: 2rem;
 }
 
 .boxgrid {
-  background-color: #444;
-  margin: 20px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boxgrid > img {
-  width: 100%;
-  height: 100%;
-}
-
-.boxgrid:hover {
-  -webkit-transform: rotate(-7deg);
-  -moz-transform: rotate(-7deg);
-  -o-transform: rotate(-7deg);
-  transform: rotate(-7deg);
+  width: 50%;
+  height: auto;
+  border:1px solid #bbb;
 }
 
 /*************abouts******************/
@@ -730,15 +748,40 @@ label{
 		display: block;
 		background: var(--bg);
     width: 100%;
-	}
-	.navbar ul li{
-		padding: 10px;
-	}
+    max-height: 0;
+    overflow: hidden;
+		-webkit-transition: max-height 0.4s ease-out;
+		-moz-transition: max-height 0.4s ease-out;
+		-o-transition: max-height 0.4s ease-out;
+		transition: max-height 0.4s ease-out;
+    
+  }
+  .navbar ul.active{
+    display: block;
+    max-height: 500px;
+		-webkit-transition: max-height 0.4s ease-in-out;
+		-moz-transition: max-height 0.4s ease-in-out;
+		-o-transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.4s ease-out;
+  }
 	.navbar ul li a{
 		width: 100%;
     padding: 12px;
     opacity: 1;
-    letter-spacing: normal;
+    font-size: 1.2em;
+  }
+  .navbar ul li:first-child{
+    padding-top:2rem ;
+  }
+  .navbar ul li:last-child{
+    padding-bottom: 2rem;
+  }
+  .navbar ul li a{
+    background-size: 0px 0px;
+    color: var(--sub-text);
+  }
+  .navbar ul li.active a{
+    background-size: 0px 0px;
   }
 	.navbar .burger{
 		display: block;
@@ -752,21 +795,6 @@ label{
 	.navbar .burger:hover{
 		color: var(--text-green);
 	}
-	.navbar ul{
-    max-height: 0;
-		overflow: hidden;
-		-webkit-transition: max-height 0.4s ease-out;
-		-moz-transition: max-height 0.4s ease-out;
-		-o-transition: max-height 0.4s ease-out;
-		transition: max-height 0.4s ease-out;
-	}
-	.navbar ul.active{
-    max-height: 500px;
-		-webkit-transition: max-height 0.4s ease-in;
-		-moz-transition: max-height 0.4s ease-in;
-		-o-transition: max-height 0.4s ease-in;
-    	transition: max-height 0.25s ease-in;
-  }
   .navbar ul li.active a{
     border-bottom: none;
     color: none;
@@ -787,6 +815,10 @@ label{
   .navbar ul .cool-link:hover::after {
     width:0;
   } 
+  .boxgrid > img {
+    width: 70%;
+  }
+  
 }
 
 @media (min-width: 768px) {
@@ -858,6 +890,14 @@ label{
   .navbar h1 a{
     font-size:20px;
   }
+  .boxgrid > img {
+    width: 90%;
+
+  }
+  .arrow{
+    bottom: 5%;
+  }
+  
 }
 @media (max-width: 330px){
   .navbar h1 a{

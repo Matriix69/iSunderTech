@@ -11,9 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,700;0,900;1,800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://kit.fontawesome.com/e5672510a3.js" crossorigin="anonymous"></script>
-  
+  <script src="https://unpkg.com/scrollreveal"></script>  
 </head>
 <body >
   <nav class="navbar">
@@ -53,8 +51,11 @@
             An Electric Vehicle Engine Manufacturing And Retrofit Company.
           </h1>
           <p class="scroll2">
-            Find out <a href="#about" class="cool-link ">who we are</a> and <a href="#contact"  class="cool-link">how we can help.</a>
+            Find out <a href="#about" class="cool-link ">who we are</a> | <a href="#contact"  class="cool-link">how we can help.</a>
           </p>       
+        </div>
+        <div class="arrow">
+          <a href="#about"><i class="fas fa-chevron-down"></i></a>
         </div>
       </div>
     </div>
@@ -120,10 +121,10 @@
             </div>
             
           </div>
-        <div class="zone grid-wrapper">
-          <div class="boxgrid zone"><img src="./img/grid.jpg"></div>
-          <div class="boxgrid zone"><img src="./img/grid1.jpg"></div>
-          <div class="boxgrid zone"><img src="./img/grid2.jpg"></div>
+        <div class=" grid-wrapper">
+          <div class="boxgrid"><img src="./img/grid.jpg"></div>
+          <div class="boxgrid"><img src="./img/grid1.jpg"></div>
+          <div class="boxgrid"><img src="./img/grid2.jpg"></div>
         </div>
   </div>
 </section>
@@ -162,15 +163,15 @@
         <div id="error" class="error"></div>
           <label class="custom-field two">
             <input type="name" id="from_name" required/>
-            <span class="placeholder">Name</span>
+            <span class="placeholder">Your Name</span>
           </label>
           <label class="custom-field two">
             <input type="email" id='email' required/>
-            <span class="placeholder">Email</span>
+            <span class="placeholder">Your Email</span>
           </label>
           <label class="custom-field two">
             <textarea name="message" id="message" required></textarea>
-            <span class="placeholder">Message</span>
+            <span class="placeholder">Include your Message</span>
           </label>
         <div class="">
           <button class="submit-btn" onclick=sendMail() type="submit">Submit</button>
