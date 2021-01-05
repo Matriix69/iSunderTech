@@ -327,9 +327,8 @@ dark mode btn
 }
 .arrow{
   position:absolute;
-  bottom: 10%;
+  bottom: 3%;
   cursor: pointer;
-  width: 100%;
   font-size: 25px;
 }
 
@@ -893,9 +892,6 @@ label{
   .boxgrid > img {
     width: 90%;
 
-  }
-  .arrow{
-    bottom: 5%;
   }
   
 }
