@@ -172,7 +172,7 @@ section:before {
   background:linear-gradient(to bottom, var(--text-green) 0%, var(--text-green) 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
-  background-size: 1px 1px;
+  background-size: 0px 0px;
   transition: background-size .3s;
 }
 
@@ -249,7 +249,7 @@ dark mode btn
   color: var(--sub-text);
   font-weight: 100;
   font-size: .9em;
-  font-family: Open Sans,sans-serif;
+  font-family: "Open Sans",sans-serif;
   padding-left: 0.2rem;
   text-transform: capitalize;
 }
@@ -325,12 +325,7 @@ dark mode btn
   height: 200px;
   
 }
-.arrow{
-  position:absolute;
-  bottom: 3%;
-  cursor: pointer;
-  font-size: 25px;
-}
+
 
 
 /***********************************************************************
