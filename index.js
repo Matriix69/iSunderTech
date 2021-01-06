@@ -92,9 +92,8 @@ ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10
 //scrollspy
 function adjustScrollSpy(){
   var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  var removeclass =  document.querySelector(".inactive");
   if (viewportWidth <= 988){
-    document.querySelector(".inactive").classList.remove("active");
+    return;
   }
   else{
       const sections = document.querySelectorAll(".hero-bg");
@@ -111,7 +110,7 @@ function adjustScrollSpy(){
 
 }
 
-['load','scroll', 'resize'].forEach(eventName => {
+['scroll', 'resize'].forEach(eventName => {
   window.addEventListener(eventName, () =>{
     scrollFunction();
     adjustScrollSpy();
