@@ -37,6 +37,7 @@ body {
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(238, 238, 238, 0.247), rgba(238, 238, 238, 0.247);
   --footer: #1d1d1d;
+  --widget-bg: #1d1d1d;
 }
 body.light-theme{
   --bg: #fafafa;
@@ -50,7 +51,8 @@ body.light-theme{
   /* --intro: linear-gradient( rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9) ), url(./img/siteheader2.jpg) no-repeat center center fixed;  */
   --headers: linear-gradient(45deg, #036c50, #5bd485);
   --form: rgba(18, 18, 18, 0.247), rgba(18, 18, 18, 0.247);
-  --footer: var(--bg-alt)
+  --footer: var(--bg-alt);
+  --widget-bg: #f0f0f0;
 }
 .container {
   padding-right: 15px;
@@ -741,8 +743,7 @@ label{
     position: absolute;
     right: 25px;
     top: 90px;
-    background-color: #1d1d1d;
-    /* background-color: var(--widget-bg,#1d1d1d); */
+    background-color: var(--widget-bg,#1d1d1d);
     padding: 5px;
     border-radius: 4px;
     z-index: 10;
@@ -813,6 +814,9 @@ label{
     max-height: 0;
     overflow: hidden;
     border: none;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.08);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.08);
+  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.08);
     padding: 0;
     -webkit-transition: max-height 0.4s ease-in-out;
     -moz-transition: max-height 0.4s ease-in-out;
