@@ -11,6 +11,34 @@ function scrollFunction() {
   }
 }
 
+//scrollspy
+function adjustScrollSpy(){
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  if (viewportWidth <= 988){
+    //pass
+  }
+  else{
+      const sections = document.querySelectorAll(".hero-bg");
+          const scrollPos =
+          document.documentElement.scrollTop || document.body.scrollTop;
+    
+          for (let s in sections)
+          if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
+              const id = sections[s].id;
+              document.querySelector(".active").classList.remove("active");
+              document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
+          }
+      }
+
+}
+
+['onload', 'scroll', 'resize'].forEach(eventName => {
+  window.addEventListener(eventName, () =>{
+    scrollFunction();
+    adjustScrollSpy();
+  })
+})
+
 //burger toggle and animation
 var burger = document.querySelector(".burger");
 var menu = document.querySelector("ul");
@@ -87,32 +115,4 @@ ScrollReveal().reveal('.box1', {delay: 500, origin: 'bottom', distance: '10px', 
 ScrollReveal().reveal('.boxgrid', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.box', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
 ScrollReveal().reveal('.scroll6', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
-ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false})
-
-//scrollspy
-function adjustScrollSpy(){
-  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  if (viewportWidth <= 988){
-    return;
-  }
-  else{
-      const sections = document.querySelectorAll(".hero-bg");
-          const scrollPos =
-          document.documentElement.scrollTop || document.body.scrollTop;
-    
-          for (let s in sections)
-          if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
-              const id = sections[s].id;
-              document.querySelector(".active").classList.remove("active");
-              document.querySelector(`ul li a[href*=${id}]`).parentNode.classList.add("active");  
-          }
-      }
-
-}
-
-['scroll', 'resize'].forEach(eventName => {
-  window.addEventListener(eventName, () =>{
-    scrollFunction();
-    adjustScrollSpy();
-  })
-})
+ScrollReveal().reveal('.boxfooter', {delay: 500, origin: 'bottom', distance: '10px', duration: 700, easing: 'cubic-bezier(.39,.575,.565,1)', mobile: false});
