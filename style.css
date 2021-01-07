@@ -691,7 +691,7 @@ label{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   border-radius: 1rem;
 
   }
@@ -701,10 +701,7 @@ label{
     font-size: 0.9em;
   }
   .boxfooter a i {
-    display:inline-block;
-    font-size: 20px;
-    width: auto;
-    padding-right: 1.5rem;
+    
   }
   .boxfooter a i:hover {
     transition: .15s;
@@ -717,6 +714,17 @@ label{
   .footertext{
     color: var(--text-green);
   }
+  .btn-social {
+    border: 2px solid var(--sub-text);
+    border-radius: 100%;
+    display: inline-flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.25rem;
+}
 
   .copyright {
     background-color: var(--bg);
@@ -800,6 +808,9 @@ label{
   } 
   .boxgrid > img {
     width: 70%;
+  }
+  .footer{
+    padding: 2rem 1rem;
   }
   
 }
@@ -932,6 +943,9 @@ label{
   }
   .footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .btn-social{
+    margin-top: 5px;
   }
 
 }
