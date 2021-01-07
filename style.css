@@ -826,6 +826,7 @@ label{
 		width: 100%;
     font-size: 1.5em;
     padding: 10px 0;
+    margin: 10px 0;
   }
   .navbar ul li:first-child{
     padding-top:2rem ;
