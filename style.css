@@ -69,13 +69,10 @@ section:before {
  *  Nav Bar
  **********************************************************************/
  @font-face {
-  font-family: 'OPTIAlternateOne';
-  src: url('fonts/OPTIAlternateOne.woff2') format('woff2'),
-      url('fonts/OPTIAlternateOne.woff') format('woff'),
-      url('fonts/OPTIAlternateOne.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+  font-family: "Alternate Gothic No3 D";
+  src: url('fonts/AlternateGotNo3D.woff2') format('woff2'),
+      url('fonts/AlternateGotNo3D.woff') format('woff'),
+      url('fonts/AlternateGotNo3D.ttf') format('truetype');
 }
  .navbar{
 	width: 100%;
@@ -160,7 +157,7 @@ section:before {
 }
 
 .navbar ul li a{
-  font-family: 'OPTIAlternateOne';
+  font-family: "Alternate Gothic No3 D";
 	width: auto;
 	/* margin-right: 10px; */
 	display: block;
@@ -739,38 +736,33 @@ label{
 	.main_container{
 		margin-top: 60px;
 	}
-	.navbar ul{
-		position: absolute;
-		top: 80px;
-		left: 0;
-		display: block;
-		background: var(--bg);
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-		-webkit-transition: max-height 0.4s ease-in-out;
-		-moz-transition: max-height 0.4s ease-in-out;
-		-o-transition: max-height 0.4s ease-in-out;
-    transition: max-height 0.4s ease-out;
+  .navbar ul{
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 90px;
+    background-color: #1d1d1d;
+    /* background-color: var(--widget-bg,#1d1d1d); */
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 10;
+    height: auto;
+    border: 1px solid hsla(0,0%,100%,.1);
+    box-shadow: 0 0 12px rgb(0 0 0 / 50%);
   }
   .navbar ul.active{
-    max-height: 500px;
-  }
-  .navbar ul li:first-child{
-    padding-top:2rem ;
-  }
-  .navbar ul li:last-child{
-    padding-bottom: 2rem;
+    display: block;
   }
 	.navbar ul li a{
 		width: 100%;
-    padding: 12px;
-    opacity: 1;
-    font-size: 1.5em;
-  }
-  .navbar ul li a{
+    padding: 10px 60px;
+    font-size: 1em;
     background-size: 0px 0px;
     color: var(--sub-text);
+    border-bottom: 1px solid var(--bg,#0d0c0c);
+  }
+  .navbar ul li a:hover{
+    opacity: 1;
   }
   .navbar ul li.active a{
     color: var(--sub-text);
@@ -809,6 +801,38 @@ label{
     width: 70%;
   }
   
+}
+@media screen and (max-width: 530px){
+  .navbar ul{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: block;
+    background: var(--bg);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    -webkit-transition: max-height 0.4s ease-in-out;
+    -moz-transition: max-height 0.4s ease-in-out;
+    -o-transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.4s ease-out;
+  }
+  .navbar ul.active{
+    max-height: 500px;
+  }
+  .navbar ul li a{
+		width: 100%;
+    font-size: 1.5em;
+    padding: 10px 0;
+  }
+  .navbar ul li:first-child{
+    padding-top:2rem ;
+  }
+  .navbar ul li:last-child{
+    padding-bottom: 2rem;
+  }
 }
 
 @media (min-width: 768px) {

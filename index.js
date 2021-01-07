@@ -15,7 +15,7 @@ function scrollFunction() {
 function adjustScrollSpy(){
   var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   if (viewportWidth <= 988){
-    //pass
+    return;
   }
   else{
       const sections = document.querySelectorAll(".hero-bg");
@@ -45,19 +45,17 @@ var menu = document.querySelector("ul");
 
 burger.addEventListener("click", function(){
   menu.classList.toggle("active");
-
   burger.classList.toggle('toggle')
 })
 
-
-//hide nav links on click
-const links = document.querySelector('.trigger')
-
-  links.addEventListener("click", () => {
-      menu.classList.remove("active");
-      burger.classList.remove("toggle")
-  })
-
+window.addEventListener('click', (e) => {
+  if (document.querySelector('.burger').contains(e.target)){
+    return;
+  }else{
+    menu.classList.remove("active");
+    burger.classList.remove("toggle")
+  }
+})
   
 
 //read more and readless function
