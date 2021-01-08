@@ -14,7 +14,7 @@ function scrollFunction() {
 //scrollspy
 function adjustScrollSpy(){
   var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  if (viewportWidth <= 988){
+  if (viewportWidth <= 900){
     return;
   }
   else{

@@ -347,7 +347,7 @@ dark mode btn
     
 }
 .header-small{
-    font-weight: 900;
+    font-weight: 900;    
 }
 
 h3 {
@@ -504,8 +504,8 @@ h5{
 
 .box > img {
     width: 150px;
-    height: 150px;
-    border-radius: 500px;
+    height: auto;
+    border-radius: 100%;
     margin-bottom: 1rem;
     
 }
@@ -736,7 +736,7 @@ label{
     text-align: center;
   }
 
-@media (max-width: 988px){
+@media (max-width: 900px){
 	.navbar{
 		padding: 30px 5px;
   }
@@ -814,7 +814,7 @@ label{
   }
   
 }
-@media screen and (max-width: 530px){
+@media screen and (max-width: 458px){
   .navbar ul{
     position: absolute;
     top: 80px;
@@ -841,7 +841,7 @@ label{
 		width: 100%;
     font-size: 1.5em;
     padding: 10px 0;
-    margin: 10px 0;
+    margin: 2vh 0;
   }
   .navbar ul li:first-child{
     padding-top:2rem ;
