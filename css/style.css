@@ -72,9 +72,9 @@ section:before {
  **********************************************************************/
  @font-face {
   font-family: "Alternate Gothic No3 D";
-  src: url('fonts/AlternateGotNo3D.woff2') format('woff2'),
-      url('fonts/AlternateGotNo3D.woff') format('woff'),
-      url('fonts/AlternateGotNo3D.ttf') format('truetype');
+  src: url('../fonts/AlternateGotNo3D.woff2') format('woff2'),
+      url('../fonts/AlternateGotNo3D.woff') format('woff'),
+      url('../fonts/AlternateGotNo3D.ttf') format('truetype');
 }
  .navbar{
 	width: 100%;
