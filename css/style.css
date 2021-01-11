@@ -72,9 +72,21 @@ section:before {
  **********************************************************************/
  @font-face {
   font-family: "Alternate Gothic No3 D";
-  src: url('../fonts/AlternateGotNo3D.woff2') format('woff2'),
-      url('../fonts/AlternateGotNo3D.woff') format('woff'),
-      url('../fonts/AlternateGotNo3D.ttf') format('truetype');
+  src: url('../fonts/AlternateGotNo3D.ttf') format('truetype');
+}
+
+.no-js{
+    color: #222;
+    background-color: #ffcd00;
+    padding: 5px 5px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;    
+    top:90px;
+}
+.no-js strong{
+  color: red;
 }
  .navbar{
 	width: 100%;
@@ -86,6 +98,7 @@ section:before {
   padding: 30px 45px;
   transition: 0.4s;
 }
+
 
 .navbar .inner_navbar{
 	display: flex;
@@ -159,7 +172,7 @@ section:before {
 }
 
 .navbar ul li a{
-  font-family: "Alternate Gothic No3 D";
+  font-family: "Alternate Gothic No3 D", 'Mulish', sans-serif;
 	width: auto;
 	/* margin-right: 10px; */
 	display: block;
