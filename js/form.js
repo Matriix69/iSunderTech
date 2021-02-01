@@ -28,8 +28,8 @@ function sendMail(){
   const mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   //assign values to send mail parameters
   let tempParams = {
-    from_name: name.value,
-    to_name: email.value,
+    name: name.value,
+    email: email.value,
     message: meg.value
   };
 
@@ -54,7 +54,7 @@ function sendMail(){
     errorElement.classList.add('success')
     errorElement.innerText = "sending..."
     //sending emaill here
-    emailjs.send('service_uijhw6c', 'template_8w4m6gp', tempParams)
+    emailjs.send('service_1jp41y8', 'template_8ak59gq', tempParams, 'user_V2DmvKy3LEGHQM5XBk5K4')
     .then(function(res){
       errorElement.innerText = "Message sent successfully"
       form.reset();
