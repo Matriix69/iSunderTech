@@ -306,10 +306,10 @@ dark mode btn
 .theme-toggle-btn {
   height: 20px;
   padding: 0 0 0 0px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-content: ;
-  align-items: center;
+  align-content: center ;
+  align-items: center; */
   background: none;
   border: none;
   outline: none;
@@ -322,6 +322,8 @@ dark mode btn
 .theme-toggle-btn svg{
   height: 17px;
   width: 17px;
+  display: flex;
+  margin: auto;
 }
 .theme-toggle-btn svg path{
  fill: #ddd
@@ -373,7 +375,7 @@ dark mode btn
   text-align: center;
   /* background-color: var(--bg) */
   /* background: var(--intro);  */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../img/home1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../img/home1.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
