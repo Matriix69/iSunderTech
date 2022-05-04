@@ -389,6 +389,7 @@ h1 {
     color: #ddd;
     font-weight: 600;
     margin-top: 2rem;
+    /* font-size: 1.3rem; */
 }
 .intro p a {
     text-decoration: none;
@@ -482,8 +483,12 @@ technology
     background: none;
     font-size: 1em;
     text-align: center;
-    margin: 10px;
+    /* margin: 10px; */
     width: 80%;
+}
+
+.box1 h2 {
+    margin-bottom: 1rem;
 }
 
 .box1 > p {
@@ -491,7 +496,7 @@ technology
     text-align: left;
     font-size: 16px !important;
     letter-spacing: 0.02em !important;
-    text-align: justify;
+    /* text-align: justify; */
     line-height: 1.7 !important;
 }
 
